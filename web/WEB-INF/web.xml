@@ -17,9 +17,25 @@
         </init-param>
         <load-on-startup>2</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>Controller.Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegistroSistema</servlet-name>
+        <servlet-class>Controller.RegistroSistema</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>action</servlet-name>
         <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroSistema</servlet-name>
+        <url-pattern>/RegistroSistema</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
