@@ -1,3 +1,4 @@
+<%@page import="Controller.Conexion"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Menu Principal</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,6 +19,25 @@
     <![endif]-->
   </head>
   <body>
+      <!-- Test BD
+        <%
+            if(Conexion.conecta()!=null)
+            {
+            %>
+            Conectado a la Base de Datos, a trabajar!
+   
+            <%
+            } 
+            else    
+            {
+            %>
+            Hubo un error al conectar, revisa los parametros!
+            <%
+            }    
+        %>
+      -->
+      
+      
     <h1>Hello, world!</h1>
     <table class="table table-bordered">
         <thead>
