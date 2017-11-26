@@ -17,7 +17,7 @@
     <body>
         <h1>Sistema Planetario</h1>
         <div class="container">
-        <form name ="form1" method="post" action="RegistroSistema">
+        <form name ="form1" method="post" action="../RegistroSistema">
 
             Nombre:<br>
             <input type="text" name="nombre"><br>
