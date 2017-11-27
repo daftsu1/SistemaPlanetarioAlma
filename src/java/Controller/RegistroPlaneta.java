@@ -5,22 +5,20 @@
  */
 package Controller;
 
-import Model.Sistema_planetario;
-import Model.Sistema_planetarioDAO;
+import Model.Planeta;
+import Model.PlanetaDao;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.System.out;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author BuddySz
+ * @author juani
  */
-public class RegistroSistema extends HttpServlet {
+public class RegistroPlaneta extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,12 +32,7 @@ public class RegistroSistema extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String nombre = request.getParameter("nombre");
-        Sistema_planetario newSystem = new Sistema_planetario(nombre);
-        Sistema_planetarioDAO miSistemaDao = new Sistema_planetarioDAO(newSystem);
 
-        miSistemaDao.insertarSistema();
-        response.sendRedirect("index.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -55,9 +48,23 @@ public class RegistroSistema extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        int id_sistema_solar = Integer.parseInt(request.getParameter("estrella"));
+        String nombre = request.getParameter("nombre");
+        int id_tipo = Integer.parseInt(request.getParameter("tipo"));
+        String simbologia = request.getParameter("simbologia");
+        int diametro_ecuatorial = Integer.parseInt(request.getParameter("diametro_ecuatorial"));
+        int masa = Integer.parseInt(request.getParameter("masa"));
+        int radio_orbital = Integer.parseInt(request.getParameter("radio_orbital"));
+        int periodo_orbital = Integer.parseInt(request.getParameter("Periodo_orbital"));
+        int periodo_rotacion = Integer.parseInt(request.getParameter("periodo_rotacion"));
+        String composicion_atmosfera = request.getParameter("composicion_atmosfera");
+        String imagen = request.getParameter("imagen");
+        
+        Planeta newPlaneta = new Planeta (id_sistema_solar, nombre, id_tipo, simbologia, diametro_ecuatorial, masa, radio_orbital, periodo_orbital, periodo_rotacion, composicion_atmosfera, imagen);
+        
     }
 
-    /**
+    /*
      * Handles the HTTP <code>POST</code> method.
      *
      * @param request servlet request
@@ -69,7 +76,6 @@ public class RegistroSistema extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
     }
 
     /**
