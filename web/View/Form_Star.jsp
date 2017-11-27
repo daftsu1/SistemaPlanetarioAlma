@@ -21,11 +21,13 @@
             <h1>Contenido</h1>
             <p>Ingrese los siguientes datos para registrar una estrella central.</p>
             <div style="background-color: graytext;">
-                <form method="post" action="">
+                <form method="post" action="../RegistroEstrellas">
                     <div class="input-group"> 
-                        <p>Sistema planetario</p>
+                        <p>Nombre</p>
+                        <input type="text" name="nombre" class="form-control"><br>
+                                                <p>Sistema planetario</p>
                         <select name="Sistema_planetario" class="form-control">
-                            <option value="-1">Seleccione un sistema planetario</option>
+                            <option name="sistemaP" value="-1">Seleccione un sistema planetario</option>
                             <%
                                 try {
                                     String Query = ("select * from sistema_planetario");
@@ -35,7 +37,7 @@
                                     ResultSet rs = stm.executeQuery(Query);
                                     while (rs.next()) {
                             %>
-                            <option value="<%=rs.getInt("id_sistema_planetario")%>"><%=rs.getString("nombre")%></option>
+                            <option name="<%=rs.getString("nombre")%>" value="<%=rs.getInt("id_sistema_planetario")%>"><%=rs.getString("nombre")%></option>
                             <%
                                     }
                                 } catch (Exception e) {
@@ -43,8 +45,6 @@
                                 }
                             %>
                         </select>
-                        <p>Nombre</p>
-                        <input type="text" name="nombre" class="form-control"><br>
                     </div>  
                     <br><br>
                     <button type="submit" style=""><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Registrar</button>
