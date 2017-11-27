@@ -26,7 +26,8 @@
 <ul>
   <li><a title="op1" href="View/home.jsp">Home</a></li>
   <li><a title="op2" href="View/Form_SystemPlanetary.jsp">Sistema Planetario</a></li>
-  <li><a title="op3" href="View/login.jsp">Login</a></li>
-  <li><a title="op4" href="Servlet?variable=4">About</a></li>
+  <li><a title="op3" href="View/Form_Planet.jsp">Planeta</a></li>
+  <li><a title="op4" href="View/Form_Star.jsp">Estrella</a></li>
+  <li><a title="op5" href="View/login.jsp>Log in</a></li>
 </ul>
 
