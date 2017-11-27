@@ -29,6 +29,10 @@
         <servlet-name>InicioSesion</servlet-name>
         <servlet-class>Controller.InicioSesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistroEstrellas</servlet-name>
+        <servlet-class>Controller.RegistroEstrellas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>action</servlet-name>
         <url-pattern>*.do</url-pattern>
@@ -44,6 +48,10 @@
     <servlet-mapping>
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroEstrellas</servlet-name>
+        <url-pattern>/RegistroEstrellas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
