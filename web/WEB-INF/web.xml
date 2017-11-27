@@ -25,6 +25,10 @@
         <servlet-name>RegistroSistema</servlet-name>
         <servlet-class>Controller.RegistroSistema</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InicioSesion</servlet-name>
+        <servlet-class>Controller.InicioSesion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>action</servlet-name>
         <url-pattern>*.do</url-pattern>
@@ -36,6 +40,10 @@
     <servlet-mapping>
         <servlet-name>RegistroSistema</servlet-name>
         <url-pattern>/RegistroSistema</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InicioSesion</servlet-name>
+        <url-pattern>/InicioSesion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
