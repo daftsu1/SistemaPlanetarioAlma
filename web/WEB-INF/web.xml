@@ -30,6 +30,10 @@
         <servlet-class>Controller.InicioSesion</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>RegistroPlaneta</servlet-name>
+        <servlet-class>Controller.RegistroPlaneta</servlet-class>  
+    </servlet>
+    <servlet>
         <servlet-name>RegistroEstrellas</servlet-name>
         <servlet-class>Controller.RegistroEstrellas</servlet-class>
     </servlet>
@@ -49,9 +53,13 @@
         <servlet-name>InicioSesion</servlet-name>
         <url-pattern>/InicioSesion</url-pattern>
     </servlet-mapping>
+      <servlet-mapping>
+        <servlet-name>RegistroPlaneta</servlet-name>
+        <url-pattern>/RegistroPlaneta</url-pattern>      
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RegistroEstrellas</servlet-name>
-        <url-pattern>/RegistroEstrellas</url-pattern>
+        <url-pattern>/RegistroEstrellas</url-pattern
     </servlet-mapping>
     <session-config>
         <session-timeout>
