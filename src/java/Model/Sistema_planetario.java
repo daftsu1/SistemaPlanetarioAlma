@@ -10,11 +10,15 @@ package Model;
  * @author BuddySz
  */
 public class Sistema_planetario {
-    private int id_sistema_planetario;
-    private String nombre;
+    int id_sistema_planetario;
+    String nombre;
 
-    public int getId_sistema_planetario() {
-        return id_sistema_planetario;
+    public Sistema_planetario(){
+        
+    }
+    
+    public Sistema_planetario(String nombre){
+        this.nombre = nombre;
     }
 
     public void setId_sistema_planetario(int id_sistema_planetario) {
